@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Abhay Ganage - Featured Projects & Web Development Portfolio. Explore recent frontend and full stack projects." />
+  <meta name="keywords"
+    content="Abhay Ganage, Projects, Featured Projects, Frontend Projects, Web Development, HTML, CSS, JavaScript, React, Tailwind CSS" />
+  <meta name="author" content="Abhay Ganage" />
+  <title>Featured Projects | Abhay Ganage</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Inline anti-FOUC script for seamless theme loading -->
+  <script>
+    (function () {
+      const theme = localStorage.getItem('theme') || 'dark';
+      if (theme === 'light') {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+      } else {
+        document.documentElement.classList.remove('light');
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+</head>
+
+<body
+  class="bg-main text-primary-theme antialiased selection:bg-purple-500 selection:text-white relative min-h-screen flex flex-col justify-between overflow-x-hidden">
+
+  <!-- Background Ambient Radial Glows -->
+  <div
+    class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none z-0 bg-glow-purple opacity-70">
+  </div>
+  <div class="fixed top-1/3 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none z-0"></div>
+
+  <!-- NAVBAR -->
+  <header
+    class="sticky top-0 z-40 w-full backdrop-blur-md bg-opacity-80 border-b border-theme transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+      <!-- Brand Logo -->
+      <a href="/" class="text-2xl font-bold tracking-tight flex items-center gap-1.5 group">
+        <span class="text-primary-theme transition-colors">Abhay</span>
+        <span class="gradient-text font-extrabold">Ganage</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/skills.html" class="nav-link">Skills</a>
+        <a href="/services.html" class="nav-link">Services</a>
+        <a href="/projects.html" class="nav-link active">Projects</a>
+        <a href="/contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Right Action Controls -->
+      <div class="hidden md:flex items-center space-x-5">
+        <!-- Theme Toggle Button -->
+        <button type="button"
+          class="theme-toggle-btn p-2.5 rounded-full theme-surface hover:border-purple-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+          aria-label="Switch to light mode">
+          <!-- Sun Icon (shown in dark mode) -->
+          <svg class="sun-icon w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <!-- Moon Icon (shown in light mode) -->
+          <svg class="moon-icon w-5 h-5 text-purple-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+
+        <!-- Hire Me CTA -->
+        <a href="mailto:abhayganage01@gmail.com"
+          class="px-6 py-2.5 rounded-full bg-purple-gradient hover:bg-purple-gradient-hover text-white text-sm font-semibold transition-all duration-300 shadow-md glow-box-sm hover:-translate-y-0.5">
+          Hire Me
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Controls -->
+      <div class="flex items-center gap-3 md:hidden">
+        <!-- Theme Toggle for Mobile Bar -->
+        <button type="button" class="theme-toggle-btn p-2 rounded-full theme-surface" aria-label="Switch to light mode">
+          <svg class="sun-icon w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg class="moon-icon w-5 h-5 text-purple-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+
+        <button id="mobile-menu-btn" type="button"
+          class="p-2 rounded-lg theme-surface hover:text-purple-400 focus:outline-none" aria-label="Toggle mobile menu">
+          <!-- Open Menu Hamburger Icon -->
+          <svg id="menu-open-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- Close Menu Icon -->
+          <svg id="menu-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu"
+      class="hidden md:hidden flex-col px-4 pt-3 pb-6 space-y-4 border-b border-theme theme-surface transition-all">
+      <a href="/"
+        class="mobile-nav-link text-base font-medium py-2 px-3 rounded-lg hover:text-purple-400 transition-colors">Home</a>
+      <a href="/about.html"
+        class="mobile-nav-link text-base font-medium py-2 px-3 rounded-lg hover:text-purple-400 transition-colors">About</a>
+      <a href="/skills.html"
+        class="mobile-nav-link text-base font-medium py-2 px-3 rounded-lg hover:text-purple-400 transition-colors">Skills</a>
+      <a href="/services.html"
+        class="mobile-nav-link text-base font-medium py-2 px-3 rounded-lg hover:text-purple-400 transition-colors">Services</a>
+      <a href="/projects.html"
+        class="mobile-nav-link text-base font-medium py-2 px-3 rounded-lg text-purple-400 font-semibold bg-purple-500/10">Projects</a>
+      <a href="/contact.html"
+        class="mobile-nav-link text-base font-medium py-2 px-3 rounded-lg text-muted-theme hover:text-purple-400 transition-colors">Contact</a>
+      <div class="pt-2">
+        <a href="mailto:abhayganage01@gmail.com"
+          class="block w-full text-center py-3 rounded-full bg-purple-gradient text-white font-semibold text-sm shadow-md">
+          Hire Me
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN PROJECTS CONTENT -->
+  <main class="flex-grow z-10 w-full py-12 lg:py-20">
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects-section w-full" aria-labelledby="projects-main-heading">
+      <div class="container max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Heading (Centered) -->
+        <div class="section-heading text-center mb-12 lg:mb-16">
+          <!-- Small Subtitle: "My Recent Work" -->
+          <span
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs sm:text-sm font-semibold tracking-widest uppercase mb-4 glow-box-sm">
+            My Recent Work
+          </span>
+
+          <!-- Main Heading: "Featured Projects" -->
+          <h1 id="projects-main-heading"
+            class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-primary-theme mb-4 leading-tight">
+            Featured <span class="gradient-text">Projects</span>
+          </h1>
+
+          <p class="text-base sm:text-lg lg:text-xl text-muted-theme max-w-2xl mx-auto leading-relaxed">
+            A showcase of DevOps projects demonstrating cloud infrastructure, automation, CI/CD pipelines, and
+            containerized deployments.
+          </p>
+        </div>
+
+        <!-- Projects Grid (Responsive: 2-column desktop/tablet, 1-column mobile, max-width: 1100px, Gap: 28px) -->
+        <div id="projects-grid-container" class="grid grid-cols-1 md:grid-cols-2 gap-7 sm:gap-8">
+          <!-- Dynamically populated by src/projects.js -->
+        </div>
+
+        <!-- Bottom CTA Banner -->
+        <div
+          class="mt-16 lg:mt-20 p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-purple-900/30 via-purple-600/20 to-indigo-900/30 border border-purple-500/30 text-center relative overflow-hidden glow-box-sm">
+          <h3 class="text-2xl sm:text-3xl font-bold text-primary-theme mb-3">
+            Interested in collaborating on a project?
+          </h3>
+          <p class="text-muted-theme max-w-xl mx-auto mb-6 text-sm sm:text-base">
+            I am always open to exploring new opportunities, freelance work, and exciting web development challenges.
+          </p>
+          <a href="/contact.html"
+            class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-purple-gradient hover:bg-purple-gradient-hover text-white font-semibold text-base transition-all duration-300 shadow-lg glow-box transform hover:-translate-y-0.5">
+            <span>Get in Touch</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Floating Chatbot is initialized dynamically by src/chatbot.js -->
+
+  <!-- FOOTER -->
+  <footer class="w-full border-t border-theme py-10 text-center z-10 bg-main">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col items-center gap-5">
+      <!-- Main Name -->
+      <a href="/"
+        class="text-3xl font-extrabold tracking-tight text-primary-theme block hover:opacity-90 transition-opacity">
+        Abhay<span class="gradient-text">.</span>
+      </a>
+
+      <!-- Subtitle -->
+      <p class="text-sm text-muted-theme">
+        Designed &amp; Built by Abhay Ganage
+      </p>
+
+      <!-- Social Media Icons -->
+      <div class="flex items-center justify-center gap-4 mt-1">
+        <!-- GitHub -->
+        <a href="https://github.com/abhay-ganage" target="_blank" rel="noopener noreferrer"
+          class="footer-social-icon group" aria-label="GitHub Profile">
+          <svg class="w-5 h-5 transition-transform duration-300 group-hover:scale-110" fill="currentColor"
+            viewBox="0 0 24 24">
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+          </svg>
+        </a>
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/abhay-ganage/" target="_blank" rel="noopener noreferrer"
+          class="footer-social-icon group" aria-label="LinkedIn Profile">
+          <svg class="w-5 h-5 transition-transform duration-300 group-hover:scale-110" fill="currentColor"
+            viewBox="0 0 24 24">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg>
+        </a>
+        <!-- Email -->
+        <a href="mailto:abhayganage01@gmail.com" class="footer-social-icon group" aria-label="Send Email">
+          <svg class="w-5 h-5 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor"
+            stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Copyright -->
+      <p class="text-xs text-muted-theme mt-1">
+        &copy; 2026 Abhay Ganage. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript Entrypoint -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

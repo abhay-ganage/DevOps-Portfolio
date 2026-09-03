@@ -233,7 +233,7 @@ const BOT_KNOWLEDGE = {
       'information technology',
       'academic'
     ],
-    text: "Abhay completed his Engineering degree in Information Technology from Parvatibai Genba Moze College of Engineering in 2025.",
+    text: "Abhay completed his Engineering degree in Information Technology from Parvatibai Genba Moze College Of Engineering, Pune. in 2025.",
     actions: [
       { label: "View Education", url: "/#education" }
     ]

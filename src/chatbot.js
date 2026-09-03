@@ -400,7 +400,10 @@ export function initChatbot() {
   if (!chatbotWrapper) {
     chatbotWrapper = document.createElement('div');
     chatbotWrapper.id = 'portfolio-chatbot-root';
+    chatbotWrapper.style.pointerEvents = 'none';
     document.body.appendChild(chatbotWrapper);
+  } else {
+    chatbotWrapper.style.pointerEvents = 'none';
   }
 
   // Remove existing obsolete static chat-btn if present
@@ -449,7 +452,8 @@ function renderChatbotDOM(root) {
     <!-- Chatbot Window Panel -->
     <div 
       id="chatbot-window" 
-      class="chatbot-panel fixed z-[9998] hidden opacity-0 scale-95 translate-y-4 transition-all duration-300 ease-out"
+      class="chatbot-panel fixed z-[9998] opacity-0 scale-95 translate-y-4 transition-all duration-300 ease-out"
+      style="display: none; pointer-events: none;"
       role="dialog"
       aria-labelledby="chatbot-header-title"
       aria-hidden="true"
@@ -585,10 +589,9 @@ function setupChatbotEvents() {
         tooltip.classList.remove('opacity-100', 'translate-y-0');
         tooltip.classList.add('opacity-0', 'translate-y-2');
       }
-      // Use style.display so the CSS flex layout from .chatbot-panel takes effect
-      // (removing .hidden would only restore display:block, not display:flex)
+      chatWindow.classList.add('is-open');
       chatWindow.style.display = 'flex';
-      chatWindow.classList.remove('hidden');
+      chatWindow.style.pointerEvents = 'auto';
       // Trigger animation on next frame
       requestAnimationFrame(() => {
         chatWindow.classList.remove('opacity-0', 'scale-95', 'translate-y-4');
@@ -605,13 +608,14 @@ function setupChatbotEvents() {
 
       setTimeout(() => input.focus(), 250);
     } else {
+      chatWindow.classList.remove('is-open');
+      chatWindow.style.pointerEvents = 'none';
       chatWindow.classList.remove('opacity-100', 'scale-100', 'translate-y-0');
       chatWindow.classList.add('opacity-0', 'scale-95', 'translate-y-4');
 
       setTimeout(() => {
         if (!isOpen) {
           chatWindow.style.display = 'none';
-          chatWindow.classList.add('hidden');
         }
       }, 300);
 

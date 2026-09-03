@@ -83,18 +83,23 @@ function initMobileMenu() {
 
   if (!menuBtn || !mobileMenu) return;
 
+  // Ensure initial closed state has pointer-events disabled
+  mobileMenu.style.pointerEvents = 'none';
+
   function toggleMenu(open) {
     const isOpen = open !== undefined ? open : mobileMenu.classList.contains('hidden');
 
     if (isOpen) {
       mobileMenu.classList.remove('hidden');
       mobileMenu.classList.add('flex');
+      mobileMenu.style.pointerEvents = 'auto';
       if (menuOpenIcon) menuOpenIcon.classList.add('hidden');
       if (menuCloseIcon) menuCloseIcon.classList.remove('hidden');
       document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
     } else {
       mobileMenu.classList.add('hidden');
       mobileMenu.classList.remove('flex');
+      mobileMenu.style.pointerEvents = 'none';
       if (menuOpenIcon) menuOpenIcon.classList.remove('hidden');
       if (menuCloseIcon) menuCloseIcon.classList.add('hidden');
       document.body.style.overflow = '';

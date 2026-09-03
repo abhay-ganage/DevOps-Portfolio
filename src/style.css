@@ -55,6 +55,46 @@ section[id] {
   }
 }
 
+/* ─── Pointer Events & Touch Interaction Isolation ─────────────────── */
+::before,
+::after {
+  pointer-events: none;
+}
+
+/* Ensure interactive elements are always clickable and above decorative layers */
+a,
+button,
+input,
+textarea,
+select,
+.project-link,
+.social-link,
+.certificate-link,
+.download-resume-btn,
+.footer-social-icon {
+  pointer-events: auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* Ensure decorative and ambient background elements never intercept touch */
+.bg-glow-purple,
+.project-animated-circle,
+.edu-timeline-line {
+  pointer-events: none !important;
+}
+
+/* Mobile Navigation Menu overlay protection */
+#mobile-menu.hidden {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+#mobile-menu:not(.hidden) {
+  display: flex !important;
+  pointer-events: auto !important;
+}
+
 /* Custom Utilities and Aesthetics */
 
 .bg-main {
@@ -363,6 +403,14 @@ html.light .service-card {
    FLOATING CHATBOT COMPONENT STYLES
    ================================================== */
 
+#portfolio-chatbot-root {
+  pointer-events: none !important;
+}
+
+#portfolio-chatbot-root .chatbot-launcher {
+  pointer-events: auto !important;
+}
+
 @keyframes chatbot-float {
   0%, 100% {
     transform: translateY(0);
@@ -404,6 +452,19 @@ html.light .service-card {
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3);
+
+  /* Pointer events: disabled unless chatbot is open */
+  pointer-events: none;
+}
+
+.chatbot-panel:not(.is-open) {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+.chatbot-panel.is-open {
+  display: flex !important;
+  pointer-events: auto !important;
 }
 
 html.light .chatbot-panel {
@@ -650,6 +711,43 @@ html.light .project-links-divider {
   .project-card:hover {
     transform: none !important;
   }
+}
+
+/* Project Action Links (Code / Live Demo) */
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #a855f7;
+  background: rgba(168, 85, 247, 0.08);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  transition: all 0.25s ease;
+  pointer-events: auto !important;
+  cursor: pointer;
+}
+
+.project-link:hover {
+  color: #ffffff;
+  background: rgba(168, 85, 247, 0.25);
+  border-color: rgba(168, 85, 247, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.25);
+}
+
+html.light .project-link {
+  color: #7c3aed;
+  background: rgba(124, 58, 237, 0.08);
+  border-color: rgba(124, 58, 237, 0.2);
+}
+
+html.light .project-link:hover {
+  color: #ffffff;
+  background: #7c3aed;
+  border-color: #7c3aed;
 }
 
 

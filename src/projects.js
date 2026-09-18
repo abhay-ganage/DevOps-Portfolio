@@ -40,7 +40,7 @@ export const projectsData = [
     number: "02",
     name: "Web Application Deployment using Jenkins on AWS",
     description:
-      "Containerized a Python Flask application using Docker to ensure deployment consistency and portability across environments. Deployed the application to an AWS EC2 instance via SSH, configuring the instance and security groups to make the containerized application accessible through its public IP address.",
+      "Containerized a Python Flask web application using Docker for environment parity. Automated deployment to an AWS EC2 instance via SSH, configuring security groups and network rules for reliable public access.",
     technologies: ["AWS", "EC2", "Jenkins", "Docker", "Python", "Flask", "SSH"],
 
     // Visual area styling: Purple / Indigo gradient
@@ -71,7 +71,7 @@ export const projectsData = [
     number: "03",
     name: "Fully Automated DevOps Deployment using Terraform & GitLab CI/CD",
     description:
-      "Built an end-to-end DevOps pipeline using Terraform and GitLab CI/CD to automate infrastructure provisioning, Docker deployment, and application testing on AWS. Implemented secure artifact handling, health checks, and manual infrastructure controls while resolving real-world Terraform, SSH, and EC2 challenges.",
+      "End-to-end DevOps pipeline using Terraform to provision AWS EC2 infrastructure and GitLab CI/CD for automated Docker deployment, artifact handling, health checks, and test execution.",
     technologies: ["Terraform", "GitLab CI/CD", "AWS", "EC2", "Docker", "Docker Compose", "Infrastructure as Code", "Shell Scripting"],
 
     // Visual area styling: Teal / Cyan gradient
@@ -96,7 +96,7 @@ export const projectsData = [
     number: "04",
     name: "Kubernetes Kind Voting App",
     description:
-      "Deployed a Kubernetes cluster using Kind on an AWS EC2 instance and integrated Argo CD to enable GitOps-driven continuous delivery. Configured the environment with Docker, Kind, and kubectl, deployed and managed applications using the Kubernetes Dashboard, and implemented Argo CD for automated GitOps-based application deployment and streamlined management of containerized applications.",
+      "Deployed a multi-node Kubernetes cluster using Kind on AWS EC2 with Argo CD for GitOps-driven continuous delivery, Docker containerization, kubectl CLI management, and Kubernetes Dashboard monitoring.",
     technologies: ["AWS EC2", "Kubernetes", "Kind", "Docker", "kubectl", "Kubernetes Dashboard", "Argo CD", "GitOps", "CI/CD"],
 
     // Visual area styling: Kubernetes Blue / Dark Navy gradient

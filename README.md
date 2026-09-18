@@ -19,10 +19,9 @@ I am passionate about building modern, responsive, scalable web applications and
 - 📂 Featured Projects
 - 🎓 Education & Certifications
 - 📞 Contact Form
-- 🌙 Dark/Light Theme Toggle
-- 💬 Interactive Chatbot
-- 📱 Fully Responsive Design
-- ✨ Smooth Scroll Animations
+- 🌙 Sleek Dark Theme
+- 📱 Fully Responsive & Touch-Optimized
+- ✨ Smooth Fade & Underline Navigation
 
 ## 🛠️ Technologies Used
 

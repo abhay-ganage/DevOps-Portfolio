@@ -5,239 +5,164 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Abhay Ganage - DevOps Engineer Portfolio — AWS, CI/CD, Docker, Kubernetes, and Terraform." />
+    content="Abhay Ganage — DevOps Engineer. AWS, Docker, Kubernetes, Terraform, CI/CD Automation, Cloud Infrastructure." />
   <meta name="keywords"
-    content="Abhay Ganage, DevOps Engineer, AWS, CI/CD, Docker, Kubernetes, Terraform, Git, Jenkins, Cloud, Automation" />
+    content="Abhay Ganage, DevOps Engineer, AWS, CI/CD, Docker, Kubernetes, Terraform, Git, Jenkins, Cloud, Pune" />
   <meta name="author" content="Abhay Ganage" />
-  <title>Abhay Ganage | DevOps Engineer</title>
+  <title>Abhay Ganage — DevOps Engineer</title>
 
-  <!-- Google Fonts: Poppins -->
+  <!-- Google Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
     rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-  <!-- Inline anti-FOUC script for seamless theme loading -->
-  <script>
-    (function () {
-      const theme = localStorage.getItem('theme') || 'dark';
-      if (theme === 'light') {
-        document.documentElement.classList.remove('dark');
-        document.documentElement.classList.add('light');
-      } else {
-        document.documentElement.classList.remove('light');
-        document.documentElement.classList.add('dark');
-      }
-    })();
-  </script>
 </head>
 
-<body
-  class="bg-main text-primary-theme antialiased selection:bg-purple-500 selection:text-white relative min-h-screen flex flex-col overflow-x-hidden">
-
-  <!-- Background Ambient Radial Glow -->
-  <div
-    class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none z-0 bg-glow-purple opacity-70">
-  </div>
+<body class="bg-main text-primary-theme antialiased selection:bg-white/10 relative min-h-screen flex flex-col overflow-x-hidden">
 
   <!-- ================================================================
-         NAVBAR
-         ================================================================ -->
-  <header
-    class="sticky top-0 z-40 w-full backdrop-blur-md bg-opacity-80 border-b border-theme transition-colors duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+       NAVBAR
+       ================================================================ -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[var(--nav-bg)] border-b border-theme">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
 
-      <!-- Brand Logo -->
-      <a href="#home" class="text-2xl font-bold tracking-tight flex items-center gap-1.5 group">
-        <span class="text-primary-theme transition-colors">Abhay</span>
-        <span class="text-white font-extrabold">Ganage</span>
+      <!-- Brand -->
+      <a href="#home" class="text-base sm:text-lg font-semibold tracking-tight text-primary-theme">
+        Abhay Ganage
       </a>
 
-      <!-- Desktop Navigation Links -->
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-1 text-sm">
         <a href="#home" class="nav-link active">Home</a>
-        <a href="#about" class="nav-link">About</a>
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#services" class="nav-link">Services</a>
         <a href="#projects" class="nav-link">Projects</a>
+        <a href="#education" class="nav-link">Education</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
-      <!-- Right Action Controls -->
-      <div class="hidden md:flex items-center space-x-5">
-        <!-- Theme Toggle Button -->
-        <button type="button"
-          class="theme-toggle-btn p-2.5 rounded-full theme-surface hover:border-purple-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
-          aria-label="Switch to light mode">
-          <!-- Sun Icon (shown in dark mode) -->
-          <svg class="sun-icon w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-          </svg>
-          <!-- Moon Icon (shown in light mode) -->
-          <svg class="moon-icon w-5 h-5 text-purple-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-          </svg>
-        </button>
-
-        <!-- Hire Me CTA -->
-        <a href="#contact"
-          class="px-6 py-2.5 rounded-full bg-purple-gradient hover:bg-purple-gradient-hover text-white text-sm font-semibold transition-all duration-300 shadow-md glow-box-sm hover:-translate-y-0.5">
-          Hire Me
+      <!-- Desktop Resume Button -->
+      <div class="hidden md:flex items-center">
+        <a href="/assets/Abhay_Ganage_DevOps.pdf" download="Abhay_ganage.pdf" target="_blank" rel="noopener noreferrer"
+          class="download-resume-btn btn-primary text-xs">
+          <i data-lucide="download" class="w-3.5 h-3.5"></i>
+          Resume
         </a>
       </div>
 
-      <!-- Mobile Hamburger Controls -->
-      <div class="flex items-center gap-3 md:hidden">
-        <!-- Theme Toggle for Mobile Bar -->
-        <button type="button" class="theme-toggle-btn p-2 rounded-full theme-surface" aria-label="Switch to light mode">
-          <svg class="sun-icon w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-          </svg>
-          <svg class="moon-icon w-5 h-5 text-purple-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-          </svg>
-        </button>
-
+      <!-- Mobile Hamburger -->
+      <div class="flex items-center md:hidden">
         <button id="mobile-menu-btn" type="button"
-          class="p-2 rounded-lg theme-surface hover:text-purple-400 focus:outline-none" aria-label="Toggle mobile menu">
-          <!-- Open Menu Hamburger Icon -->
-          <svg id="menu-open-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <!-- Close Menu Icon -->
-          <svg id="menu-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
+          class="p-2 rounded-md text-primary-theme focus:outline-none cursor-pointer" aria-label="Toggle menu">
+          <i data-lucide="menu" id="menu-open-icon" class="w-5 h-5"></i>
+          <i data-lucide="x" id="menu-close-icon" class="w-5 h-5 hidden"></i>
         </button>
       </div>
 
     </div>
 
-    <!-- Mobile Navigation Drawer -->
+    <!-- Mobile Drawer -->
     <div id="mobile-menu"
-      class="hidden md:hidden flex-col px-4 pt-3 pb-6 space-y-4 border-b border-theme theme-surface transition-all">
-      <a href="#home"
-        class="mobile-nav-link nav-link active text-base font-medium py-2 px-3 rounded-lg transition-colors">Home</a>
-      <a href="#about"
-        class="mobile-nav-link nav-link text-base font-medium py-2 px-3 rounded-lg transition-colors">About</a>
-      <a href="#skills"
-        class="mobile-nav-link nav-link text-base font-medium py-2 px-3 rounded-lg transition-colors">Skills</a>
-      <a href="#services"
-        class="mobile-nav-link nav-link text-base font-medium py-2 px-3 rounded-lg transition-colors">Services</a>
-      <a href="#projects"
-        class="mobile-nav-link nav-link text-base font-medium py-2 px-3 rounded-lg transition-colors">Projects</a>
-      <a href="#contact"
-        class="mobile-nav-link nav-link text-base font-medium py-2 px-3 rounded-lg transition-colors">Contact</a>
-      <div class="pt-2">
-        <a href="#contact"
-          class="mobile-nav-link block w-full text-center py-3 rounded-full bg-purple-gradient text-white font-semibold text-sm shadow-md">
-          Hire Me
+      class="hidden md:hidden flex-col px-4 pt-3 pb-6 space-y-1 border-b border-theme bg-[var(--bg-surface)]">
+      <a href="#home" class="mobile-nav-link nav-link active block py-2.5 px-3 rounded-md text-sm">Home</a>
+      <a href="#skills" class="mobile-nav-link nav-link block py-2.5 px-3 rounded-md text-sm">Skills</a>
+      <a href="#services" class="mobile-nav-link nav-link block py-2.5 px-3 rounded-md text-sm">Services</a>
+      <a href="#projects" class="mobile-nav-link nav-link block py-2.5 px-3 rounded-md text-sm">Projects</a>
+      <a href="#education" class="mobile-nav-link nav-link block py-2.5 px-3 rounded-md text-sm">Education</a>
+      <a href="#contact" class="mobile-nav-link nav-link block py-2.5 px-3 rounded-md text-sm">Contact</a>
+      <div class="pt-3">
+        <a href="/assets/Abhay_Ganage_DevOps.pdf" download="Abhay_ganage.pdf" target="_blank" rel="noopener noreferrer"
+          class="download-resume-btn btn-primary w-full text-center text-sm">
+          <i data-lucide="download" class="w-3.5 h-3.5"></i>
+          Download Resume
         </a>
       </div>
     </div>
   </header>
 
   <!-- ================================================================
-         MAIN CONTENT — all sections in one continuous scroll
-         ================================================================ -->
+       MAIN CONTENT
+       ================================================================ -->
   <main class="flex-grow z-10 w-full">
 
     <!-- ==============================================================
-           1. HOME / HERO SECTION
-           ============================================================== -->
-    <section id="home"
-      class="w-full py-12 lg:py-20 min-h-[calc(100vh-5rem)] flex items-center border-b border-theme/40">
-      <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+         1. HERO / INTRO (Merged Hero + About)
+         ============================================================== -->
+    <section id="home" class="w-full py-16 sm:py-20 lg:py-28 border-b border-theme">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
 
-        <!-- Left Content Column -->
-        <div class="lg:col-span-7 flex flex-col justify-center items-start text-left">
+        <!-- Left: Content -->
+        <div class="lg:col-span-7 flex flex-col justify-center items-start text-left order-2 lg:order-1">
 
-          <!-- Welcome Badge -->
-          <div
-            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-sm font-medium mb-6 glow-box-sm">
-            <span>👋</span>
-            <span>Welcome to my Portfolio</span>
-          </div>
+          <span class="section-tag mb-5">DevOps & Cloud Engineer</span>
 
-          <!-- Greeting & Name Heading -->
-          <p class="text-xl sm:text-2xl text-muted-theme font-medium mb-2">Hello, I'm</p>
-          <h1
-            class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-primary-theme mb-4 leading-tight">
-            Abhay <span style="color: #FFFFFF;">Ganage</span>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-primary-theme mb-4 leading-[1.15]">
+            Hi, I'm Abhay Ganage
           </h1>
 
-          <!-- Role Subtitle -->
-          <h2 class="text-lg sm:text-xl lg:text-2xl font-bold text-primary-theme mb-6 flex items-center gap-3">
-            <span class="w-8 h-1 bg-purple-500 rounded-full inline-block"></span>
-            DevOps Engineer | Cloud & Automation Enthusiast
-          </h2>
-
-          <!-- Description Paragraph -->
-          <p class="text-base sm:text-lg text-muted-theme leading-relaxed max-w-xl mb-8">
-            Passionate about building reliable and scalable infrastructure, I specialize in automating deployments,
-            streamlining CI/CD pipelines, and managing modern cloud environments. With expertise across AWS, Docker,
-            Kubernetes, Terraform, Jenkins, Shell Scripting, and Python, I bring automation and efficiency to
-            development workflows through clean practices, continuous improvement, and impactful problem-solving.
+          <p class="text-sm sm:text-base text-muted-theme leading-relaxed max-w-xl mb-7">
+            BE in Information Technology from Parvatibai Genba Moze College of Engineering, Pune. Trainee AWS Cloud Engineer at Cravita Technologies. I build resilient cloud infrastructure with AWS &amp; Linux, automated CI/CD pipelines &amp; GitOps, and Docker &amp; Kubernetes — focused on security, reproducibility, high availability, and operational efficiency.
           </p>
 
           <!-- Action Buttons -->
-          <div class="flex flex-wrap items-center gap-4 mb-10">
-            <a href="#projects"
-              class="px-8 py-3.5 rounded-full bg-purple-gradient hover:bg-purple-gradient-hover text-white font-semibold text-base transition-all duration-300 transform hover:-translate-y-1 shadow-lg glow-box">
-              View Projects
+          <div class="flex flex-wrap items-center gap-3 mb-6">
+            <a href="/assets/Abhay_Ganage_DevOps.pdf" download="Abhay_ganage.pdf" target="_blank" rel="noopener noreferrer"
+              class="download-resume-btn btn-primary">
+              <i data-lucide="download" class="w-4 h-4"></i>
+              Download Resume
             </a>
-            <a href="#contact"
-              class="px-8 py-3.5 rounded-full border-2 border-purple-500/50 hover:border-purple-400 hover:bg-purple-500/10 text-primary-theme font-semibold text-base transition-all duration-300">
-              Contact Me
+            <a href="#contact" class="btn-secondary">
+              Get in Touch
+            </a>
+            <a href="#projects" class="btn-secondary">
+              View Projects
             </a>
           </div>
 
           <!-- Social Links -->
-          <div
-            class="flex flex-wrap items-center gap-6 text-muted-theme text-sm font-medium pt-2 border-t border-theme w-full max-w-lg">
-            <span class="text-xs uppercase tracking-wider font-semibold text-muted-theme opacity-80">Follow Me:</span>
+          <div class="flex items-center gap-4 text-xs font-mono uppercase tracking-wider text-muted-theme pt-4 border-t border-theme w-full max-w-lg">
+            <span>Connect</span>
             <a href="https://github.com/abhay-ganage" target="_blank" rel="noopener noreferrer"
-              class="social-link hover:text-purple-400 transition-colors flex items-center gap-1.5 group">
-              <svg class="w-4 h-4 transition-transform group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+              class="social-link text-white hover:opacity-80 flex items-center gap-1.5 transition-opacity">
+              <svg class="w-3.5 h-3.5 fill-white shrink-0" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
               </svg>
-              GitHub
+              <span>GitHub</span>
+              <i data-lucide="arrow-up-right" class="w-3 h-3 text-muted-theme"></i>
             </a>
+            <span class="text-[var(--border-hover)]">/</span>
             <a href="https://www.linkedin.com/in/abhay-ganage/" target="_blank" rel="noopener noreferrer"
-              class="social-link hover:text-purple-400 transition-colors flex items-center gap-1.5 group">
-              <svg class="w-4 h-4 transition-transform group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+              class="social-link text-white hover:opacity-80 flex items-center gap-1.5 transition-opacity">
+              <svg class="w-3.5 h-3.5 fill-white shrink-0" viewBox="0 0 24 24">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28z"/>
               </svg>
-              LinkedIn
+              <span>LinkedIn</span>
+              <i data-lucide="arrow-up-right" class="w-3 h-3 text-muted-theme"></i>
             </a>
-            <a href="https://www.instagram.com/abhayy._11?igsi=b2pqanU3dmdnd2hs" target="_blank"
-              rel="noopener noreferrer"
-              class="social-link hover:text-purple-400 transition-colors flex items-center gap-1.5 group">
-              <svg class="w-4 h-4 transition-transform group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            <span class="text-[var(--border-hover)]">/</span>
+            <a href="https://www.instagram.com/abhayy._11?igsi=b2pqanU3dmdnd2hs" target="_blank" rel="noopener noreferrer"
+              class="social-link text-white hover:opacity-80 flex items-center gap-1.5 transition-opacity">
+              <svg class="w-3.5 h-3.5 fill-white shrink-0" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
               </svg>
-              Instagram
+              <span>Instagram</span>
+              <i data-lucide="arrow-up-right" class="w-3 h-3 text-muted-theme"></i>
             </a>
           </div>
 
         </div>
 
-        <!-- Right Profile Image Column -->
-        <div class="lg:col-span-5 flex justify-center lg:justify-end items-center relative">
-          <div class="relative w-72 h-72 sm:w-88 sm:h-88 lg:w-[420px] lg:h-[420px] profile-frame-home animate-float">
-            <img src="/assets/Abhay.png" alt="Abhay Ganage - Full-Stack Developer"
-              class="w-full h-full object-cover rounded-full border-4 border-slate-900 shadow-2xl" />
+        <!-- Right: Profile Picture -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end items-center order-1 lg:order-2">
+          <div class="w-56 h-64 sm:w-64 sm:h-72 lg:w-[320px] lg:h-[380px] profile-frame-classic">
+            <img src="/assets/Abhay.png" alt="Abhay Ganage — DevOps Engineer" />
           </div>
         </div>
 
@@ -245,579 +170,273 @@
     </section>
 
     <!-- ==============================================================
-           2. ABOUT SECTION
-           ============================================================== -->
-    <section id="about" class="w-full py-16 lg:py-24 border-b border-theme/40" aria-labelledby="about-heading">
-      <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
-
-        <!-- Left Image Column -->
-        <div class="lg:col-span-5 flex justify-center items-center">
-          <div class="relative w-full max-w-md h-[440px] sm:h-[500px] profile-frame-about about-image">
-            <img src="/assets/profileimg.png" alt="Abhay Ganage - DevOps Engineer"
-              class="w-full h-full rounded-[1.25rem] border-4 border-slate-900 shadow-2xl" />
-          </div>
-        </div>
-
-        <!-- Right Content Column -->
-        <div class="lg:col-span-7 flex flex-col justify-center items-start text-left">
-
-          <!-- Section Label -->
-          <div
-            class="text-xs sm:text-sm font-bold uppercase tracking-widest text-purple-400 mb-3 flex items-center gap-2">
-            <span class="w-6 h-0.5 bg-purple-500 rounded-full inline-block"></span>
-            ABOUT ME
-          </div>
-
-          <!-- Main Heading -->
-          <h2 id="about-heading"
-            class="text-2xl sm:text-4xl font-extrabold tracking-tight text-primary-theme mb-6 leading-tight">
-            Passionate DevOps Engineer |<br class="hidden sm:inline" />
-            <span class="gradient-text">Cloud Enthusiast</span>
-          </h2>
-
-          <!-- Description Paragraph -->
-          <p class="text-base sm:text-lg text-muted-theme leading-relaxed mb-8">
-            I’m Abhay Ganage, a DevOps Engineer focused on cloud infrastructure, CI/CD automation, and containerization.
-            I work with AWS, Docker, Kubernetes, Jenkins, Terraform, Python, and Shell Scripting to build and automate
-            reliable infrastructure and deployment workflows. I enjoy solving infrastructure challenges, improving
-            automation, and building scalable solutions using modern DevOps practices.
-
-          </p>
-
-          <!-- 4 Information Cards (2x2 Grid) -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 w-full mb-8">
-
-            <!-- Card 1: Name -->
-            <div class="theme-surface rounded-2xl p-5 glow-border transition-all">
-              <div class="text-xs uppercase tracking-wider text-muted-theme font-medium mb-1">Name</div>
-              <div class="text-lg font-bold text-primary-theme">Abhay Ganage</div>
-            </div>
-
-            <!-- Card 2: Education -->
-            <div class="theme-surface rounded-2xl p-5 glow-border transition-all">
-              <div class="text-xs uppercase tracking-wider text-muted-theme font-medium mb-1">Education</div>
-              <div class="text-lg font-bold text-primary-theme">BE Graduate, 2025</div>
-            </div>
-
-            <!-- Card 3: Location -->
-            <div class="theme-surface rounded-2xl p-5 glow-border transition-all">
-              <div class="text-xs uppercase tracking-wider text-muted-theme font-medium mb-1">Location</div>
-              <div class="text-lg font-bold text-primary-theme">Pune, Maharashtra, India</div>
-            </div>
-
-            <!-- Card 4: Email -->
-            <div class="theme-surface rounded-2xl p-5 glow-border transition-all">
-              <div class="text-xs uppercase tracking-wider text-muted-theme font-medium mb-1">Email</div>
-              <a href="mailto:abhayganage01@gmail.com"
-                class="text-base font-bold text-purple-400 hover:text-purple-300 underline underline-offset-4 transition-colors break-all">
-                abhayganage01@gmail.com
-              </a>
-            </div>
-
-          </div>
-
-          <!-- Download Resume CTA Button -->
-          <a href="/assets/Abhay_Ganage_DevOps.pdf" download="Abhay_ganage.pdf" target="_blank"
-            rel="noopener noreferrer"
-            class="download-resume-btn px-8 py-3.5 rounded-full bg-purple-gradient hover:bg-purple-gradient-hover text-white font-semibold text-base transition-all duration-300 shadow-lg glow-box inline-flex items-center gap-3 group">
-            <svg class="w-5 h-5 group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-            Download Resume
-          </a>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==============================================================
-           3. SKILLS SECTION
-           ============================================================== -->
-    <section id="skills" class="w-full py-16 lg:py-24 border-b border-theme/40" aria-labelledby="skills-heading">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-
-        <!-- Section Header -->
-        <div class="text-center mb-12 lg:mb-16">
-          <span
-            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs sm:text-sm font-semibold tracking-widest uppercase mb-4 glow-box-sm">
-            What I Know
-          </span>
-          <h2 id="skills-heading"
-            class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-primary-theme mb-4 leading-tight">
-            Skill <span class="gradient-text">Arsenal 🛠️</span>
-          </h2>
-          <p class="text-base sm:text-lg lg:text-xl text-muted-theme max-w-2xl mx-auto leading-relaxed">
-            A collection of technologies and tools I use to build, automate, and manage reliable infrastructure.
-          </p>
-        </div>
-
-        <!-- Dynamic Skills Cards Grid — populated by src/skills.js -->
-        <div id="skills-grid-container" class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-          <!-- Dynamically populated by src/skills.js -->
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==============================================================
-           4. SERVICES SECTION
-           ============================================================== -->
-    <section id="services" class="services-section w-full py-16 lg:py-24 border-b border-theme/40"
-      aria-labelledby="services-heading">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-
-        <!-- Section Heading (Centered) -->
-        <div class="section-heading services-header text-center mb-14 lg:mb-20">
-          <span
-            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs sm:text-sm font-semibold tracking-widest uppercase mb-4 glow-box-sm">
-            WHAT I DO
-          </span>
-          <h2 id="services-heading"
-            class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-primary-theme mb-5 leading-tight">
-            My <span class="gradient-text">Expertise</span>
-          </h2>
-          <p class="text-base sm:text-lg lg:text-xl text-muted-theme max-w-2xl mx-auto leading-relaxed">
-            I specialize in cloud infrastructure, CI/CD automation, containerization, and building reliable deployment
-            workflows.
-          </p>
-        </div>
-
-        <!-- Services Grid — populated by src/services.js -->
-        <div id="services-grid-container" class="services-grid grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-          <!-- Dynamically populated by src/services.js -->
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==============================================================
-           5. PROJECTS SECTION
-           ============================================================== -->
-    <section id="projects" class="projects-section w-full py-16 lg:py-24 border-b border-theme/40"
-      aria-labelledby="projects-main-heading">
-      <div class="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8">
-
-        <!-- Section Heading (Centered) -->
-        <div class="section-heading text-center mb-12 lg:mb-16">
-          <span
-            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs sm:text-sm font-semibold tracking-widest uppercase mb-4 glow-box-sm">
-            My Recent Work
-          </span>
-          <h2 id="projects-main-heading"
-            class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-primary-theme mb-4 leading-tight">
-            Featured <span class="gradient-text">Projects</span>
-          </h2>
-          <p class="text-base sm:text-lg text-muted-theme max-w-2xl mx-auto leading-relaxed">
-            A showcase of DevOps projects demonstrating cloud infrastructure, automation, CI/CD pipelines, and
-            containerized deployments.
-          </p>
-        </div>
-
-        <!-- Projects Grid — populated by src/projects.js -->
-        <div id="projects-grid-container" class="grid grid-cols-1 md:grid-cols-2 gap-7 sm:gap-8">
-          <!-- Dynamically populated by src/projects.js -->
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==============================================================
-           6. EDUCATION & CERTIFICATIONS SECTION
-           ============================================================== -->
-    <section id="education" class="w-full py-16 lg:py-24 border-b border-theme/40 overflow-x-hidden"
-      aria-labelledby="education-heading">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-
-        <!-- Section Header -->
-        <div class="text-center mb-14 lg:mb-20">
-          <span
-            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs sm:text-sm font-semibold tracking-widest uppercase mb-4 glow-box-sm">
-            Education
-          </span>
-          <h2 id="education-heading"
-            class="text-3xl sm:text-5xl font-extrabold tracking-tight text-primary-theme mb-4 leading-tight">
-            Education &amp; <span class="gradient-text">Certifications</span>
-          </h2>
-          <p class="text-base sm:text-lg text-muted-theme max-w-2xl mx-auto leading-relaxed">
-            My educational background and certifications that have strengthened my foundation in DevOps and cloud
-            technologies.
-          </p>
-        </div>
-
-        <!-- Timeline Container -->
-        <div class="edu-timeline relative max-w-3xl mx-auto">
-          <!-- Vertical Line -->
-          <div
-            class="edu-timeline-line absolute left-4 sm:left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-600 via-purple-400 to-indigo-600 opacity-40 -translate-x-px">
-          </div>
-
-          <!-- ── Item 1: Education ── -->
-          <div class="edu-timeline-item group relative mb-10 sm:mb-12 pl-12 sm:pl-16">
-
-            <!-- Dot -->
-            <span
-              class="edu-dot absolute left-4 sm:left-6 top-5 w-3 h-3 rounded-full bg-purple-500 border-2 border-purple-300 -translate-x-1/2 shadow-[0_0_12px_rgba(139,92,246,0.9)] z-10">
-            </span>
-
-            <!-- Card -->
-            <div
-              class="edu-card theme-surface rounded-2xl p-5 sm:p-6 w-full border border-theme hover:border-purple-500/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(124,92,255,0.18)] cursor-pointer group-hover:border-purple-500/50 block">
-
-              <!-- Date -->
-              <span
-                class="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-purple-400 mb-2">
-
-                <!-- Calendar Icon -->
-                <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-
-                </svg>
-
-                Graduated — 2025
-
-              </span>
-
-              <!-- Degree -->
-              <!-- Degree Title -->
-              <h3 class="text-base sm:text-lg font-bold text-primary-theme leading-snug mb-1">
-                B.E - Information Technology
-              </h3>
-
-              <!-- Institution & University -->
-              <p class="text-sm font-medium text-purple-300/80 mb-0.5">
-                Parvatibai Genba Moze College Of Engineering, Pune.
-              </p>
-              <p class="text-xs text-muted-theme">
-                Savitribai Phule Pune University (SPPU)
-              </p>
-
-            </div>
-
-          </div>
-
-          <!-- ── Item 2: Internship – CodeAlpha ── -->
-          <div class="edu-timeline-item group relative mb-10 sm:mb-12 pl-12 sm:pl-16">
-            <!-- Dot -->
-            <span
-              class="edu-dot pointer-events-none absolute left-4 sm:left-6 top-5 w-3 h-3 rounded-full bg-purple-500 border-2 border-purple-300 -translate-x-1/2 shadow-[0_0_12px_rgba(139,92,246,0.9)] z-10"></span>
-            <!-- Card -->
-            <a href="/assets/certificates/internshipcertificate.jpg" target="_blank" rel="noopener noreferrer"
-              class="certificate-link edu-card theme-surface rounded-2xl p-5 sm:p-6 w-full border border-theme hover:border-purple-500/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(124,92,255,0.18)] cursor-pointer block">
-              <span
-                class="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-2">
-                <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                Internship
-              </span>
-              <h3 class="text-base sm:text-lg font-bold text-primary-theme leading-snug mb-1">Trainee AWS Cloud Engineer
-              </h3>
-              <p class="text-sm text-muted-theme">Trainee AWS Cloud Engineer at Cravita Technologies, Pune.</p>
-              <div
-                class="mt-3 flex items-center gap-1 text-xs text-purple-400 opacity-70 group-hover:opacity-100 transition-opacity">
-                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-                View Certificate
-              </div>
-            </a>
-          </div>
-
-          <!-- ── Item 3: Certification – MCA Course ── -->
-          <div class="edu-timeline-item group relative mb-10 sm:mb-12 pl-12 sm:pl-16">
-            <!-- Dot -->
-            <span
-              class="edu-dot pointer-events-none absolute left-4 sm:left-6 top-5 w-3 h-3 rounded-full bg-purple-500 border-2 border-purple-300 -translate-x-1/2 shadow-[0_0_12px_rgba(139,92,246,0.9)] z-10"></span>
-            <!-- Card -->
-            <a href="/assets/certificates/coursecertificate.jpg" target="_blank" rel="noopener noreferrer"
-              class="certificate-link edu-card theme-surface rounded-2xl p-5 sm:p-6 w-full border border-theme hover:border-purple-500/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(124,92,255,0.18)] cursor-pointer block">
-              <span
-                class="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-amber-400 mb-2">
-                <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                </svg>
-                Certification
-              </span>
-              <h3 class="text-base sm:text-lg font-bold text-primary-theme leading-snug mb-1">MCA Course</h3>
-              <p class="text-sm text-muted-theme">FortuneCloud Technologies</p>
-              <div
-                class="mt-3 flex items-center gap-1 text-xs text-purple-400 opacity-70 group-hover:opacity-100 transition-opacity">
-                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-                View Certificate
-              </div>
-            </a>
-          </div>
-
-          <!-- ── Item 4: Certification – Cloud Foundations ── -->
-          <div class="edu-timeline-item group relative mb-10 sm:mb-12 pl-12 sm:pl-16">
-            <!-- Dot -->
-            <span
-              class="edu-dot pointer-events-none absolute left-4 sm:left-6 top-5 w-3 h-3 rounded-full bg-purple-500 border-2 border-purple-300 -translate-x-1/2 shadow-[0_0_12px_rgba(139,92,246,0.9)] z-10"></span>
-            <!-- Card -->
-            <a href="/assets/certificates/cloudfoundation.png" target="_blank" rel="noopener noreferrer"
-              class="certificate-link edu-card theme-surface rounded-2xl p-5 sm:p-6 w-full border border-theme hover:border-purple-500/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(124,92,255,0.18)] cursor-pointer block">
-              <span
-                class="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-amber-400 mb-2">
-                <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                </svg>
-                Certification
-              </span>
-              <h3 class="text-base sm:text-lg font-bold text-primary-theme leading-snug mb-1">Cloud Foundations</h3>
-              <p class="text-sm text-muted-theme">Great Learning Academy</p>
-              <div
-                class="mt-3 flex items-center gap-1 text-xs text-purple-400 opacity-70 group-hover:opacity-100 transition-opacity">
-                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-                View Certificate
-              </div>
-            </a>
-          </div>
-
-          <!-- ── Item 5: Certification – Python Developer ── -->
-          <div class="edu-timeline-item group relative mb-10 sm:mb-12 pl-12 sm:pl-16">
-            <!-- Dot -->
-            <span
-              class="edu-dot pointer-events-none absolute left-4 sm:left-6 top-5 w-3 h-3 rounded-full bg-purple-500 border-2 border-purple-300 -translate-x-1/2 shadow-[0_0_12px_rgba(139,92,246,0.9)] z-10"></span>
-            <!-- Card -->
-            <a href="/assets/certificates/python.png" target="_blank" rel="noopener noreferrer"
-              class="certificate-link edu-card theme-surface rounded-2xl p-5 sm:p-6 w-full border border-theme hover:border-purple-500/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(124,92,255,0.18)] cursor-pointer block">
-              <span
-                class="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-amber-400 mb-2">
-                <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                </svg>
-                Certification
-              </span>
-              <h3 class="text-base sm:text-lg font-bold text-primary-theme leading-snug mb-1">Python Development
-              </h3>
-              <p class="text-sm text-muted-theme">TechnoHacks Pvt.Ltd.</p>
-              <div
-                class="mt-3 flex items-center gap-1 text-xs text-purple-400 opacity-70 group-hover:opacity-100 transition-opacity">
-                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-                View Certificate
-              </div>
-            </a>
-          </div>
-
-          <!-- ── Item 6: Certification – Cloud Computing ── -->
-          <div class="edu-timeline-item group relative mb-2 pl-12 sm:pl-16">
-            <!-- Dot -->
-            <span
-              class="edu-dot pointer-events-none absolute left-4 sm:left-6 top-5 w-3 h-3 rounded-full bg-purple-500 border-2 border-purple-300 -translate-x-1/2 shadow-[0_0_12px_rgba(139,92,246,0.9)] z-10"></span>
-            <!-- Card -->
-            <a href="/assets/certificates/cloudfoundation.png" target="_blank" rel="noopener noreferrer"
-              class="certificate-link edu-card theme-surface rounded-2xl p-5 sm:p-6 w-full border border-theme hover:border-purple-500/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(124,92,255,0.18)] cursor-pointer block">
-              <span
-                class="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-amber-400 mb-2">
-                <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                </svg>
-                Certification
-              </span>
-              <h3 class="text-base sm:text-lg font-bold text-primary-theme leading-snug mb-1">Cloud Computing</h3>
-              <p class="text-sm text-muted-theme">IBM.</p>
-              <div
-                class="mt-3 flex items-center gap-1 text-xs text-purple-400 opacity-70 group-hover:opacity-100 transition-opacity">
-                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-                View Certificate
-              </div>
-            </a>
-          </div>
-
-        </div><!-- end .edu-timeline -->
-
-      </div>
-    </section>
-
-    <!-- ==============================================================
-           8. CONTACT SECTION
-           ============================================================== -->
-    <section id="contact" class="w-full py-16 lg:py-24" aria-labelledby="contact-heading">
+         2. PROFESSIONAL SKILL SET
+         ============================================================== -->
+    <section id="skills" class="w-full py-14 sm:py-20 border-b border-theme" aria-labelledby="skills-heading">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
-        <!-- Section Header -->
-        <div class="text-center mb-12 lg:mb-16">
-          <p class="text-purple-400 font-semibold text-sm uppercase tracking-widest text-center mb-2">
-            Let's Talk
-          </p>
-          <h2 id="contact-heading"
-            class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-center text-primary-theme leading-tight">
-            Contact <span class="gradient-text">Me</span>
+        <div class="mb-10 sm:mb-12">
+          <span class="section-tag mb-3">Core Competencies</span>
+          <h2 id="skills-heading" class="text-2xl sm:text-3xl font-bold tracking-tight text-primary-theme mb-2">
+            Professional Skill Set
           </h2>
+          <p class="text-sm text-muted-theme max-w-xl">
+            Domain-organized technologies and tools used to build, automate, and manage scalable cloud infrastructure.
+          </p>
         </div>
 
-        <!-- 2-Column Main Contact Layout -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+        <div id="skills-grid-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
 
-          <!-- LEFT COLUMN: Contact Info Cards -->
-          <div class="lg:col-span-5 flex flex-col justify-start">
+      </div>
+    </section>
 
-            <h3 class="text-2xl sm:text-3xl font-bold text-primary-theme mb-4">
-              Have a project in mind?
+    <!-- ==============================================================
+         3. SERVICES
+         ============================================================== -->
+    <section id="services" class="w-full py-14 sm:py-20 border-b border-theme" aria-labelledby="services-heading">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+
+        <div class="mb-10 sm:mb-12">
+          <span class="section-tag mb-3">Capabilities</span>
+          <h2 id="services-heading" class="text-2xl sm:text-3xl font-bold tracking-tight text-primary-theme mb-2">
+            What I Deliver
+          </h2>
+          <p class="text-sm text-muted-theme max-w-xl">
+            Reliable engineering across cloud provisioning, CI/CD pipelines, container clusters, and automated environments.
+          </p>
+        </div>
+
+        <div id="services-grid-container" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         4. PROJECTS
+         ============================================================== -->
+    <section id="projects" class="w-full py-14 sm:py-20 border-b border-theme" aria-labelledby="projects-heading">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+
+        <div class="mb-10 sm:mb-12">
+          <span class="section-tag mb-3">Portfolio</span>
+          <h2 id="projects-heading" class="text-2xl sm:text-3xl font-bold tracking-tight text-primary-theme mb-2">
+            Featured Projects
+          </h2>
+          <p class="text-sm text-muted-theme max-w-xl">
+            Production-grade implementations of cloud infrastructure, automated CI/CD pipelines, and container clusters.
+          </p>
+        </div>
+
+        <div id="projects-grid-container" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         5. EDUCATION & CERTIFICATIONS
+         ============================================================== -->
+    <section id="education" class="w-full py-14 sm:py-20 border-b border-theme" aria-labelledby="education-heading">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+
+        <div class="mb-10 sm:mb-12">
+          <span class="section-tag mb-3">Qualifications</span>
+          <h2 id="education-heading" class="text-2xl sm:text-3xl font-bold tracking-tight text-primary-theme mb-2">
+            Education & Certifications
+          </h2>
+          <p class="text-sm text-muted-theme max-w-xl">
+            Academic background, professional internship experience, and verified technical credentials.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+
+          <!-- Left: Academic -->
+          <div class="space-y-3">
+            <h3 class="text-xs font-mono uppercase tracking-wider text-muted-theme font-semibold mb-2">
+              Academic & Experience
             </h3>
-            <p class="text-base text-muted-theme leading-relaxed mb-8 sm:mb-10">
-              Have a project or opportunity in mind? Let’s connect and explore how we can build something impactful
-              together.
-            </p>
 
-            <!-- Contact Cards Grid -->
-            <div class="flex flex-col gap-4 sm:gap-5">
+            <!-- BE IT -->
+            <div class="resume-card">
+              <div class="flex items-start justify-between gap-3 mb-2">
+                <span class="font-mono text-[11px] font-semibold text-muted-theme uppercase">Engineering</span>
+                <span class="text-[10px] font-medium px-2 py-0.5 rounded-sm bg-[var(--bg-surface-muted)] text-[var(--text-secondary)]">Graduated</span>
+              </div>
+              <h4 class="text-sm sm:text-base font-bold text-primary-theme mb-1">
+                BE — Information Technology
+              </h4>
+              <p class="text-xs text-muted-theme mb-0.5">
+                Parvatibai Genba Moze College of Engineering, Pune (BE IT)
+              </p>
+            </div>
 
-              <!-- Card 1: Email -->
-              <a href="mailto:abhayganage01@gmail.com"
-                class="theme-surface rounded-2xl p-4 sm:p-5 flex items-center gap-4 border border-theme hover:border-purple-500/50 hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
-                <div
-                  class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-purple-500/20 transition-all duration-300">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <div class="overflow-hidden">
-                  <div class="text-xs uppercase tracking-wider text-muted-theme font-medium mb-0.5">Email</div>
-                  <div
-                    class="text-base sm:text-lg font-bold text-primary-theme group-hover:text-purple-400 transition-colors break-all">
-                    abhayganage01@gmail.com
-                  </div>
-                </div>
-              </a>
+            <!-- Internship -->
+            <a href="/assets/certificates/internshipcertificate.jpg" target="_blank" rel="noopener noreferrer"
+              class="certificate-link resume-card block group cursor-pointer">
+              <div class="flex items-start justify-between gap-3 mb-2">
+                <span class="font-mono text-[11px] font-semibold text-muted-theme uppercase">Internship</span>
+                <span class="text-[10px] font-medium text-primary-theme group-hover:opacity-70 flex items-center gap-1 transition-opacity">
+                  View Certificate <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                </span>
+              </div>
+              <h4 class="text-sm sm:text-base font-bold text-primary-theme mb-1">
+                Trainee AWS Cloud Engineer
+              </h4>
+              <p class="text-xs text-muted-theme mb-0.5">Cravita Technologies, Pune</p>
+              <p class="text-xs text-muted-theme">
+                AWS infrastructure, EC2, security groups, automated backups.
+              </p>
+            </a>
+          </div>
 
-              <!-- Card 2: GitHub -->
-              <a href="https://github.com/abhay-ganage" target="_blank" rel="noopener noreferrer"
-                class="social-link theme-surface rounded-2xl p-4 sm:p-5 flex items-center gap-4 border border-theme hover:border-purple-500/50 hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
-                <div
-                  class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-purple-500/20 transition-all duration-300">
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="text-xs uppercase tracking-wider text-muted-theme font-medium mb-0.5">GitHub</div>
-                  <div
-                    class="text-base sm:text-lg font-bold text-primary-theme group-hover:text-purple-400 transition-colors">
-                    github.com/abhay-ganage
-                  </div>
-                </div>
-              </a>
+          <!-- Right: Certifications -->
+          <div class="space-y-3">
+            <h3 class="text-xs font-mono uppercase tracking-wider text-muted-theme font-semibold mb-2">
+              Industry Certifications
+            </h3>
 
-              <!-- Card 3: LinkedIn -->
-              <a href="https://www.linkedin.com/in/abhay-ganage/" target="_blank" rel="noopener noreferrer"
-                class="social-link theme-surface rounded-2xl p-4 sm:p-5 flex items-center gap-4 border border-theme hover:border-purple-500/50 hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
-                <div
-                  class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-purple-500/20 transition-all duration-300">
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
-                  </svg>
-                </div>
-                <div class="overflow-hidden">
-                  <div class="text-xs uppercase tracking-wider text-muted-theme font-medium mb-0.5">LinkedIn</div>
-                  <div
-                    class="text-base sm:text-lg font-bold text-primary-theme group-hover:text-purple-400 transition-colors truncate">
-                    linkedin.com/in/abhay-ganage/
-                  </div>
-                </div>
-              </a>
+            <a href="/assets/certificates/coursecertificate.jpg" target="_blank" rel="noopener noreferrer"
+              class="certificate-link resume-card block group cursor-pointer">
+              <div class="flex items-start justify-between gap-3 mb-1.5">
+                <span class="font-mono text-[10px] font-semibold text-muted-theme uppercase">FortuneCloud Technologies</span>
+                <span class="text-[10px] font-medium text-primary-theme group-hover:opacity-70 flex items-center gap-1 transition-opacity">
+                  Verify <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                </span>
+              </div>
+              <h4 class="text-sm font-bold text-primary-theme mb-0.5">Cloud &amp; DevOps Certification Course</h4>
+              <p class="text-xs text-muted-theme">Cloud computing, AWS services, and enterprise infrastructure.</p>
+            </a>
 
-              <!-- Card 4: Location -->
-              <div
-                class="theme-surface rounded-2xl p-4 sm:p-5 flex items-center gap-4 border border-theme hover:border-purple-500/50 transition-all duration-300 group">
-                <div
-                  class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-purple-500/20 transition-all duration-300">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="text-xs uppercase tracking-wider text-muted-theme font-medium mb-0.5">Location</div>
-                  <div class="text-base sm:text-lg font-bold text-primary-theme">Pune, Maharashtra, India</div>
+            <a href="/assets/certificates/cloudfoundation.png" target="_blank" rel="noopener noreferrer"
+              class="certificate-link resume-card block group cursor-pointer">
+              <div class="flex items-start justify-between gap-3 mb-1.5">
+                <span class="font-mono text-[10px] font-semibold text-muted-theme uppercase">Great Learning Academy</span>
+                <span class="text-[10px] font-medium text-primary-theme group-hover:opacity-70 flex items-center gap-1 transition-opacity">
+                  Verify <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                </span>
+              </div>
+              <h4 class="text-sm font-bold text-primary-theme mb-0.5">Cloud Foundations</h4>
+              <p class="text-xs text-muted-theme">Cloud architecture, virtualization, security models.</p>
+            </a>
+
+            <a href="/assets/certificates/python.png" target="_blank" rel="noopener noreferrer"
+              class="certificate-link resume-card block group cursor-pointer">
+              <div class="flex items-start justify-between gap-3 mb-1.5">
+                <span class="font-mono text-[10px] font-semibold text-muted-theme uppercase">TechnoHacks Pvt. Ltd.</span>
+                <span class="text-[10px] font-medium text-primary-theme group-hover:opacity-70 flex items-center gap-1 transition-opacity">
+                  Verify <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                </span>
+              </div>
+              <h4 class="text-sm font-bold text-primary-theme mb-0.5">Python Development</h4>
+              <p class="text-xs text-muted-theme">Automation scripting, algorithms, practical utilities.</p>
+            </a>
+
+            <a href="/assets/certificates/cloudfoundation.png" target="_blank" rel="noopener noreferrer"
+              class="certificate-link resume-card block group cursor-pointer">
+              <div class="flex items-start justify-between gap-3 mb-1.5">
+                <span class="font-mono text-[10px] font-semibold text-muted-theme uppercase">IBM</span>
+                <span class="text-[10px] font-medium text-primary-theme group-hover:opacity-70 flex items-center gap-1 transition-opacity">
+                  Verify <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                </span>
+              </div>
+              <h4 class="text-sm font-bold text-primary-theme mb-0.5">Cloud Computing Fundamentals</h4>
+              <p class="text-xs text-muted-theme">Enterprise cloud deployment, scalability, DevOps methodologies.</p>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         6. CONTACT
+         ============================================================== -->
+    <section id="contact" class="w-full py-14 sm:py-20" aria-labelledby="contact-heading">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+
+        <div class="mb-10 sm:mb-12">
+          <span class="section-tag mb-3">Connect</span>
+          <h2 id="contact-heading" class="text-2xl sm:text-3xl font-bold tracking-tight text-primary-theme mb-2">
+            Get In Touch
+          </h2>
+          <p class="text-sm text-muted-theme max-w-xl">
+            Available for full-time DevOps, Cloud Engineer, and SRE roles. Reach out directly via email or connect through professional networks.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
+
+          <!-- Left: Contact Cards -->
+          <div class="lg:col-span-5 space-y-3">
+
+            <a href="mailto:abhayganage01@gmail.com" class="theme-surface p-4 rounded-lg flex items-center gap-4 block group">
+              <div class="w-9 h-9 rounded-md bg-[var(--bg-surface-muted)] flex items-center justify-center text-primary-theme shrink-0">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </div>
+              <div class="overflow-hidden">
+                <div class="font-mono text-[10px] uppercase tracking-wider text-muted-theme mb-0.5">Email</div>
+                <div class="text-sm font-semibold text-primary-theme group-hover:opacity-70 truncate transition-opacity">
+                  abhayganage01@gmail.com
                 </div>
               </div>
+            </a>
 
+            <a href="https://github.com/abhay-ganage" target="_blank" rel="noopener noreferrer"
+              class="social-link theme-surface p-4 rounded-lg flex items-center gap-4 block group">
+              <div class="w-9 h-9 rounded-md bg-[var(--bg-surface-muted)] flex items-center justify-center text-primary-theme shrink-0">
+                <i data-lucide="github" class="w-4 h-4"></i>
+              </div>
+              <div class="overflow-hidden">
+                <div class="font-mono text-[10px] uppercase tracking-wider text-muted-theme mb-0.5">GitHub</div>
+                <div class="text-sm font-semibold text-primary-theme group-hover:opacity-70 truncate transition-opacity">
+                  github.com/abhay-ganage
+                </div>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/abhay-ganage/" target="_blank" rel="noopener noreferrer"
+              class="social-link theme-surface p-4 rounded-lg flex items-center gap-4 block group">
+              <div class="w-9 h-9 rounded-md bg-[var(--bg-surface-muted)] flex items-center justify-center text-primary-theme shrink-0">
+                <i data-lucide="linkedin" class="w-4 h-4"></i>
+              </div>
+              <div class="overflow-hidden">
+                <div class="font-mono text-[10px] uppercase tracking-wider text-muted-theme mb-0.5">LinkedIn</div>
+                <div class="text-sm font-semibold text-primary-theme group-hover:opacity-70 truncate transition-opacity">
+                  linkedin.com/in/abhay-ganage
+                </div>
+              </div>
+            </a>
+
+            <div class="theme-surface p-4 rounded-lg flex items-center gap-4">
+              <div class="w-9 h-9 rounded-md bg-[var(--bg-surface-muted)] flex items-center justify-center text-primary-theme shrink-0">
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <div class="font-mono text-[10px] uppercase tracking-wider text-muted-theme mb-0.5">Location</div>
+                <div class="text-sm font-semibold text-primary-theme">Pune, Maharashtra, India</div>
+              </div>
             </div>
 
           </div>
 
-          <!-- RIGHT COLUMN: Glassmorphism Contact Form -->
+          <!-- Right: Email Card -->
           <div class="lg:col-span-7">
-            <div
-              class="theme-surface rounded-3xl p-6 sm:p-8 lg:p-10 border border-purple-500/30 glow-box-sm shadow-2xl backdrop-blur-xl relative z-10">
-
-              <!-- Accessible Feedback Alert Container -->
-              <div id="form-status-message" class="hidden mb-6 p-4 rounded-xl text-sm font-medium transition-all"></div>
-
-              <form id="contact-form" class="flex flex-col gap-5 sm:gap-6" novalidate>
-
-                <!-- Input: Name -->
-                <div>
-                  <label for="contact-name" class="sr-only">Your Name</label>
-                  <input type="text" id="contact-name" name="name" required placeholder="Your Name"
-                    class="w-full px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl border border-theme bg-main/40 text-primary-theme placeholder-muted-theme focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 transition-all duration-300 text-sm sm:text-base font-medium" />
-                </div>
-
-                <!-- Input: Email -->
-                <div>
-                  <label for="contact-email" class="sr-only">Your Email</label>
-                  <input type="email" id="contact-email" name="email" required placeholder="Your Email"
-                    class="w-full px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl border border-theme bg-main/40 text-primary-theme placeholder-muted-theme focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 transition-all duration-300 text-sm sm:text-base font-medium" />
-                </div>
-
-                <!-- Input: Subject -->
-                <div>
-                  <label for="contact-subject" class="sr-only">Subject</label>
-                  <input type="text" id="contact-subject" name="subject" required placeholder="Subject"
-                    class="w-full px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl border border-theme bg-main/40 text-primary-theme placeholder-muted-theme focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 transition-all duration-300 text-sm sm:text-base font-medium" />
-                </div>
-
-                <!-- Textarea: Message -->
-                <div>
-                  <label for="contact-message" class="sr-only">Your Message</label>
-                  <textarea id="contact-message" name="message" required rows="5" placeholder="Your Message"
-                    class="w-full px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl border border-theme bg-main/40 text-primary-theme placeholder-muted-theme focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 transition-all duration-300 text-sm sm:text-base font-medium resize-y min-h-[150px]"></textarea>
-                </div>
-
-                <!-- Submit Button -->
-                <button type="submit" id="contact-submit-btn"
-                  class="w-full py-4 px-8 rounded-xl sm:rounded-2xl bg-purple-gradient hover:bg-purple-gradient-hover text-white font-bold text-base sm:text-lg shadow-lg glow-box hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 flex items-center justify-center gap-3 group focus:outline-none focus:ring-4 focus:ring-purple-500/40">
-                  <span>Send Message</span>
-                  <svg
-                    class="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                  </svg>
-                </button>
-
-              </form>
-
+            <div class="theme-surface p-6 sm:p-8 rounded-lg flex flex-col items-start justify-center h-full">
+              <div class="w-10 h-10 rounded-md bg-[var(--bg-surface-muted)] flex items-center justify-center text-primary-theme mb-4">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-primary-theme mb-2">
+                Direct Email
+              </h3>
+              <p class="text-sm text-muted-theme leading-relaxed mb-6 max-w-md">
+                Interested in discussing DevOps roles, cloud infrastructure, or project collaborations? My inbox is always open.
+              </p>
+              <a href="mailto:abhayganage01@gmail.com" class="btn-primary inline-flex items-center gap-2.5 text-sm px-6 py-3">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+                <span>abhayganage01@gmail.com</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </a>
             </div>
           </div>
 
@@ -828,56 +447,18 @@
 
   </main>
 
-  <!-- Floating Chatbot is initialized dynamically by src/chatbot.js -->
-
   <!-- ================================================================
-         FOOTER
-         ================================================================ -->
-  <footer class="w-full border-t border-theme py-10 text-center z-10 bg-main">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col items-center gap-5">
-      <!-- Main Name -->
-      <a href="#home"
-        class="text-3xl font-extrabold tracking-tight text-primary-theme block hover:opacity-90 transition-opacity">
-        Abhay<span class="gradient-text">.</span>
+       FOOTER
+       ================================================================ -->
+  <footer class="w-full border-t border-theme py-8 text-center z-10 bg-main">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col items-center gap-2">
+      <a href="#home" class="text-base font-semibold tracking-tight text-primary-theme hover:opacity-70 transition-opacity">
+        Abhay Ganage
       </a>
-
-      <!-- Subtitle -->
-      <p class="text-sm text-muted-theme">
-        Designed &amp; Built by Abhay Ganage
+      <p class="text-[10px] font-mono uppercase tracking-wider text-muted-theme">
+        DevOps &amp; Cloud Infrastructure Engineer &bull; Pune, India
       </p>
-
-      <!-- Social Media Icons -->
-      <div class="flex items-center justify-center gap-4 mt-1">
-        <!-- GitHub -->
-        <a href="https://github.com/abhay-ganage" target="_blank" rel="noopener noreferrer"
-          class="social-link footer-social-icon group" aria-label="GitHub Profile">
-          <svg class="w-5 h-5 transition-transform duration-300 group-hover:scale-110" fill="currentColor"
-            viewBox="0 0 24 24">
-            <path
-              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-          </svg>
-        </a>
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/abhay-ganage/" target="_blank" rel="noopener noreferrer"
-          class="social-link footer-social-icon group" aria-label="LinkedIn Profile">
-          <svg class="w-5 h-5 transition-transform duration-300 group-hover:scale-110" fill="currentColor"
-            viewBox="0 0 24 24">
-            <path
-              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-          </svg>
-        </a>
-        <!-- Email -->
-        <a href="mailto:abhayganage01@gmail.com" class="social-link footer-social-icon group" aria-label="Send Email">
-          <svg class="w-5 h-5 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor"
-            stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-          </svg>
-        </a>
-      </div>
-
-      <!-- Copyright -->
-      <p class="text-xs text-muted-theme mt-1">
+      <p class="text-[10px] text-muted-theme mt-1">
         &copy; 2026 Abhay Ganage. All Rights Reserved.
       </p>
     </div>

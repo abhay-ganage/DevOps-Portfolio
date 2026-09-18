@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
-/* ─── Single-Page Smooth Scroll ────────────────────────────────────────── */
+/* ─── Single-Page Smooth Scroll & Viewport Safety ─────────────────────── */
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Account for sticky navbar so section headings don't hide beneath it */
@@ -31,11 +34,17 @@ section[id] {
     --nav-bg: rgba(10, 10, 11, 0.88);
   }
 
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
   body {
     background-color: var(--bg-main);
     color: var(--text-primary);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -44,6 +53,11 @@ section[id] {
   h1, h2, h3, h4 {
     font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     letter-spacing: -0.025em;
+    overflow-wrap: break-word;
+  }
+
+  p, span, a {
+    overflow-wrap: break-word;
   }
 }
 
